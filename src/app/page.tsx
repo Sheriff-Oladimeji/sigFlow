@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import sigflow from "public/sigflow.svg";
+import sigflow from "public/Sigflow.svg";
 import { Login } from "@/components/Login";
 import github from "public/github.svg"
 import google from "public/google.svg"
