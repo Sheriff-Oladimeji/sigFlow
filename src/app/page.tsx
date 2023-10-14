@@ -4,16 +4,16 @@ import sigflow from "public/sigflow.svg";
 import { Login } from "@/components/Login";
 const page = () => {
   return (
-    <section>
+    <section className="w-full  ">
       <Image src={sigflow} alt="logo" />x{" "}
-      <section className="flex justify-center items-center h-screen">
-        <main className="border border-[#E6E7EC] rounded-md">
+      <section className=" w-[90%] sm:w-[65%] md:w-[50%] lg:w-[40%] xl:w-[35%] mx-auto mt-20">
+        <main className="border border-[#E6E7EC] rounded-md flex flex-col  py-8">
           <div className="w-[90%] mx-auto ">
-            <div>
-              <h2 className="text-xl text-dark font-semibold">Welcome back!</h2>
+            <div className="flex flex-col items-center gap-2 mb-8">
+              <h2 className="text-3xl text-dark font-semibold">Welcome back!</h2>
               <p>Sign in to access your account</p>
             </div>
-            <Login/>
+            <Login />
           </div>
         </main>
       </section>
