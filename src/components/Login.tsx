@@ -3,9 +3,12 @@ import axios from "axios";
 import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useRouter } from "next/navigation";
 export const Login = () => {
+  const router = useRouter()
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+ 
 
   const handleLogin = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
@@ -26,6 +29,7 @@ export const Login = () => {
           "https://sig-staging-api-a4c37da3d933.herokuapp.com/auth/login",
           { email, password }
         );
+       
         toast.success("Login successful", {
           position: "top-right",
           autoClose: 5000,
@@ -35,10 +39,13 @@ export const Login = () => {
           draggable: true,
           progress: undefined,
           theme: "light",
-        });
+        })
+await router.push("/dashboard");
+        
+        
       } catch (error) {
         console.error(error);
-        toast.error("Something went wrong", {
+        toast.error("User not found", {
           position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
@@ -50,6 +57,7 @@ export const Login = () => {
         });
       }
     }
+   
   };
 
   return (
@@ -61,6 +69,7 @@ export const Login = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           className="p-2 border border-gray-300 rounded-lg w-full focus:outline-none focus:bg-transparent"
+          autoComplete="off"
         />
       </div>
       <div className="flex flex-col gap-2">
@@ -71,7 +80,9 @@ export const Login = () => {
           value={password}
           className="p-2 border border-gray-300 rounded-lg w-full focus:outline-none focus:bg-transparent"
           onChange={(e) => setPassword(e.target.value)}
+          autoComplete="off"
         />
+        <small className="text-green font-semibold">Forgot Password?</small>
       </div>
       <button
         className="rounded-lg w-full bg-green text-white p-2"
