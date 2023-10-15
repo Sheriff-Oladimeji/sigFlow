@@ -1,8 +1,13 @@
+import Navbar from '@/components/Navbar'
+import Transformation from '@/components/Transformation'
 import React from 'react'
 
 const page = () => {
   return (
-    <div>dashboard</div>
+    <section className='flex'>
+      <Navbar />
+      <Transformation/>
+    </section>
   )
 }
 
