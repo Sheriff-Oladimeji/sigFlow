@@ -1,8 +1,11 @@
 import React from 'react'
+import Header from './Header'
 
 const Transformation = () => {
   return (
-    <div>Transformation</div>
+    <div className='relative w-[80%] '>
+      <Header/>
+    </div>
   )
 }
 

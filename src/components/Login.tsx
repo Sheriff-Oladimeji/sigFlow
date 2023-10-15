@@ -69,7 +69,7 @@ await router.push("/dashboard");
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           className="p-2 border border-gray-300 rounded-lg w-full focus:outline-none focus:bg-transparent"
-          autoComplete="off"
+        
         />
       </div>
       <div className="flex flex-col gap-2">
@@ -80,7 +80,7 @@ await router.push("/dashboard");
           value={password}
           className="p-2 border border-gray-300 rounded-lg w-full focus:outline-none focus:bg-transparent"
           onChange={(e) => setPassword(e.target.value)}
-          autoComplete="off"
+       
         />
         <small className="text-green font-semibold">Forgot Password?</small>
       </div>

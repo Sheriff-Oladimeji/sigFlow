@@ -1,23 +1,73 @@
-import Image from 'next/image';
-import React from 'react'
-import logo from "public/Sigflow.svg"
-const Navbar = () => {
-    return (
-      <nav className="bg-[#fafafa66] w-[30%]">
-        <div>
-          <Image src={logo} alt="" />
-        </div>
-        <main>
-          <div className='bg-[#f2f2f2] '>
-            <h3>Sigflow</h3>
-            <Image src={} alt=''/>
-                </div>
-                <div>
-                    
-                </div>
-        </main>
-      </nav>
-    );
+import Image, { StaticImageData } from "next/image";
+import React from "react";
+import logo from "public/Sigflow.svg";
+import selector from "public/selector.svg";
+import file from "public/file-02.svg";
+import pipe from "public/link-05.svg";
+import share from "public/share-04.svg";
+import transform from "public/transform.svg";
+import user from "public/user-01.svg";
+import book from "public/book.svg";
+interface Item {
+  id: number;
+  img: StaticImageData;
+  text: string;
 }
 
-export default Navbar
+const items: Item[] = [
+  {
+    id: 1,
+    img: file,
+    text: "Events",
+  },
+  {
+    id: 2,
+    img: pipe,
+    text: "Pipeline",
+  },
+  {
+    id: 3,
+    img: share,
+    text: "Source",
+  },
+  {
+    id: 4,
+    img: share,
+    text: "Destination",
+  },
+  {
+    id: 5,
+    img: transform,
+    text: "Transformations",
+  },
+];
+const Navbar = () => {
+  return (
+    <nav className="w-[20%] bg-zinc-50 px-8 hidden md:flex flex-col gap-6 h-full py-12">
+      <div>
+        <Image src={logo} alt="" />
+      </div>
+      <main>
+        <div className="bg-[#f2f2f2]  flex items-center justify-between p-3 rounded-md">
+          <h3 className="font-semibold">Sigflow</h3>
+          <Image src={selector} alt="" />
+        </div>
+        <div className="flex flex-col gap-4 my-8">
+          {items.map((item) => (
+            <div
+              key={item.id}
+              className={`${
+                item.id === 5 ? "text-green bg-[#ECFDF3] p-2 rounded-md" : "text-[#828282]"
+              } font-semibold flex  gap-4 item-center`}
+            >
+              <Image src={item.img} alt={item.text} />
+              <p>{item.text}</p>
+            </div>
+          ))}
+        </div>
+      </main>
+    </nav>
+  );
+};
+
+export default Navbar;
