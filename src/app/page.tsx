@@ -22,17 +22,17 @@ const page = () => {
             <Login />
             <p className="text-[#828282] font-semibold text-center mb-4">OR</p>
             <div className="flex  items-center gap-6">
-              <p className="flex gap-4 border  border-gray-300 rounded-lg items-center p-2">
+              <p className="flex gap-4 border flex-col sm:flex-row   border-gray-300 rounded-lg items-center p-2">
                 <span className="text-sm">Sign in with Github</span>
                 <Image src={github} alt="" />
               </p>
-              <p className="flex gap-4 border  border-gray-300 rounded-lg items-center p-2">
-                <span className="text-sm">Sign in with Github</span>
+              <p className="flex flex-col sm:flex-row gap-4 border  border-gray-300 rounded-lg items-center p-2">
+                <span className="text-sm">Sign in with Google</span>
                 <Image src={google} alt="" />
               </p>
             </div>
             <div className="flex flex-col items-center mt-4">
-              <p className="flex gap-4 border  border-gray-300 rounded-lg items-center p-2">
+              <p className="flex gap-4 border   border-gray-300 rounded-lg items-center p-2">
                 <span className="text-sm">Sign in with SS0</span>
                 <Image src={key} alt="" />
               </p>
@@ -40,7 +40,10 @@ const page = () => {
           </div>
         </main>
         <span className="text-dark flex justify-center items-center gap-1 mt-3">
-          Don’t have an account? <Link href="/signup" className="text-green font-semibold">Sign Up</Link>
+          Don’t have an account?{" "}
+          <Link href="/signup" className="text-green font-semibold">
+            Sign Up
+          </Link>
         </span>
       </section>
     </section>
