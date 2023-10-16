@@ -68,7 +68,7 @@ await router.push("/dashboard");
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="p-2 border border-gray-300 rounded-lg w-full focus:outline-none focus:bg-transparent"
+          className="p-2 border border-gray-300 focus:border-green  rounded-lg w-full focus:outline-none focus:bg-transparent "
         
         />
       </div>
@@ -78,7 +78,7 @@ await router.push("/dashboard");
           type="password"
           placeholder="Password"
           value={password}
-          className="p-2 border border-gray-300 rounded-lg w-full focus:outline-none focus:bg-transparent"
+          className="p-2 border border-gray-300 rounded-lg w-full focus:outline-none focus:border-green focus:bg-transparent"
           onChange={(e) => setPassword(e.target.value)}
        
         />
