@@ -21,12 +21,12 @@ const page = () => {
             </div>
             <Login />
             <p className="text-[#828282] font-semibold text-center mb-4">OR</p>
-            <div className="flex  items-center gap-6">
-              <p className="flex gap-4 border flex-col sm:flex-row   border-gray-300 rounded-lg items-center p-2">
+            <div className="flex flex-col sm:flex-row items-center gap-6">
+              <p className="flex gap-4 border   border-gray-300 rounded-lg items-center p-2">
                 <span className="text-sm">Sign in with Github</span>
                 <Image src={github} alt="" />
               </p>
-              <p className="flex flex-col sm:flex-row gap-4 border  border-gray-300 rounded-lg items-center p-2">
+              <p className="flex  gap-4 border  border-gray-300 rounded-lg items-center p-2">
                 <span className="text-sm">Sign in with Google</span>
                 <Image src={google} alt="" />
               </p>
